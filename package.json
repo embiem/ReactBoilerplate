@@ -1,44 +1,50 @@
 {
-  "name": "boilerplate",
+  "name": "react-boilerplate",
   "version": "1.0.0",
-  "description": "Simple react app",
-  "main": "index.js",
+  "description": "Boilerplate Project that I'll try to keep up-to-date",
   "scripts": {
-    "test": "karma start",
-    "start": "node server.js"
+    "start": "parcel public/index.html",
+    "build": "parcel build public/index.html",
+    "test": "jest"
   },
-  "author": "Martin Beierling",
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test"
+    }
+  },
+  "alias": {
+    "components": "./src/components",
+    "modules": "./src/modules",
+    "pages": "./src/pages",
+    "utils": "./src/utils"
+  },
+  "author": {
+    "email": "mbeierling@gmail.com",
+    "name": "Martin Beierling"
+  },
   "license": "MIT",
+  "repository": "git@github.com:mBeierl/ReactBoilerplate.git",
   "dependencies": {
-    "axios": "^0.9.1",
-    "express": "^4.13.4",
-    "react": "^0.14.7",
-    "react-addons-test-utils": "^0.14.7",
-    "react-dom": "^0.14.7",
-    "react-router": "^2.0.0"
+    "@rematch/core": "^1.0.0-beta.4",
+    "axios": "^0.18.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "store": "^2.0.12"
   },
   "devDependencies": {
-    "babel-core": "^6.5.1",
-    "babel-loader": "^6.2.2",
-    "babel-preset-es2015": "^6.5.0",
-    "babel-preset-react": "^6.5.0",
-    "babel-preset-stage-0": "^6.5.0",
-    "css-loader": "^0.23.1",
-    "expect": "^1.14.0",
-    "foundation-sites": "6.2.0",
-    "jquery": "^2.2.1",
-    "karma": "^0.13.22",
-    "karma-chrome-launcher": "^0.2.2",
-    "karma-mocha": "^0.2.2",
-    "karma-mocha-reporter": "^2.0.0",
-    "karma-sourcemap-loader": "^0.3.7",
-    "karma-webpack": "^1.7.0",
-    "mocha": "^2.4.5",
-    "node-sass": "^3.4.2",
-    "sass-loader": "^3.1.2",
-    "script-loader": "^0.6.1",
-    "style-loader": "^0.13.0",
-    "webpack": "^1.12.13"
-  },
-  "repository": "git@github.com:mBeierl/ReactBoilerplate.git"
+    "babel-eslint": "7.2.3",
+    "eslint": "4.1.1",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "2.34.1",
+    "eslint-plugin-import": "2.6.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "7.1.0",
+    "husky": "^1.0.0-rc.13",
+    "jest": "^23.4.0",
+    "parcel-bundler": "^1.9.6",
+    "prettier": "1.13.7"
+  }
 }
